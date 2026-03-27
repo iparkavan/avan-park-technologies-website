@@ -34,3 +34,49 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+<!-- Avan Park Technologies -->
+
+<!-- Overall Structure -->
+
+src/
+│
+├── app/
+│ ├── layout.tsx
+│ ├── page.tsx
+│ ├── globals.css
+│ │
+│ ├── (marketing)/ # Landing pages group
+│ │ ├── page.tsx # Home (Parallax)
+│ │ ├── about/
+│ │ ├── services/
+│ │ └── contact/
+│ │
+│ ├── api/ # Backend routes
+│
+├── components/
+│ ├── ui/ # Buttons, cards, inputs
+│ ├── layout/ # Navbar, Footer
+│ ├── sections/ # Landing page sections
+│
+├── features/
+│ ├── home/ # Home-specific logic
+│ ├── auth/
+│
+├── lib/
+│ ├── utils.ts
+│ ├── constants.ts
+│
+├── hooks/
+│
+├── styles/
+
+<!-- Sections Structure-->
+
+components/sections/
+│
+├── Hero.tsx
+├── About.tsx
+├── Services.tsx
+├── TechStack.tsx
+├── Contact.tsx
