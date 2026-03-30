@@ -13,6 +13,7 @@ import {
   Infinity,
   ArrowRight,
 } from "lucide-react";
+import { useRef } from "react";
 
 const services = [
   {
@@ -38,15 +39,34 @@ const services = [
 ];
 
 const OurService = () => {
-  const { scrollY } = useScroll();
+  const ref = useRef(null);
 
-  // Animate margin from 20px → 0px
-  const margin = useTransform(scrollY, [30, 300], [50, 0]);
+  const { scrollYProgress, scrollY } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
 
-  // Optional: smooth border radius shrink
+  // Expand → shrink
+  const margin = useTransform(
+    scrollYProgress,
+    [0, 0.3, 0.7, 1],
+    [50, 0, 0, 50],
+  );
+  //   const { scrollY } = useScroll();
+
+  //   // Animate margin from 20px → 0px
+  //   const margin = useTransform(scrollY, [30, 300], [50, 0]);
+
+  //   // Optional: smooth border radius shrink
   const radius = useTransform(scrollY, [0, 300], [24, 24]);
   return (
     <motion.div
+      //   style={{
+      //     marginLeft: margin,
+      //     marginRight: margin,
+      //     borderRadius: radius,
+      //   }}
+      ref={ref}
       style={{
         marginLeft: margin,
         marginRight: margin,
