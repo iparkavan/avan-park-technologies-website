@@ -2,16 +2,12 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "../ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   const { scrollY } = useScroll();
 
   // Parallax layers
-  // const yBg = useTransform(scrollY, [0, 500], [0, 150]); // slow
-  // const yVideo = useTransform(scrollY, [0, 500], [0, 80]); // subtle
-  // const yText = useTransform(scrollY, [0, 500], [0, 120]); // 👈 slower for natural feel
-
   const yBg = useTransform(scrollY, [0, 500], [0, 250]); // slower but noticeable
   const yVideo = useTransform(scrollY, [0, 500], [0, 150]); // mid layer
   const yText = useTransform(scrollY, [0, 500], [0, 300]); // fastest → most visible
