@@ -48,7 +48,7 @@ const Navbar = () => {
           className="flex items-center gap-2"
         >
           {/* <BookOpen className="h-8 w-8 text-primary" /> */}
-          <span className="text-2xl font-bold text-secondary">AVAN PARK</span>
+          <span className="text-2xl font-bold text-primary">AVAN PARK</span>
         </motion.div>
       </Link>
 

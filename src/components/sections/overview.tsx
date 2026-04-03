@@ -118,12 +118,16 @@ export default function Overview() {
           <motion.div
             whileHover={{ y: -10 }}
             transition={{ type: "spring", stiffness: 300 }}
-            className="p-6 sm:p-8 rounded-2xl bg-muted/40 backdrop-blur-sm border border-border shadow-sm"
+            className="lg:row-span-2 flex justify-between flex-col p-6 bg-muted/40  sm:p-8 rounded-2xl backdrop-blur-sm border border-border shadow-sm min-h-[260px] lg:min-h-0"
           >
-            <h3 className="text-xl font-semibold mb-3">Development</h3>
-            <p className="text-muted-foreground text-sm sm:text-base">
-              Scalable, high-performance web apps built with modern tech.
-            </p>
+            <h3 className="text-5xl sm:text-6xl font-semibold">5M+</h3>
+
+            <div className="space-y-3 sm:space-y-4 mt-6 lg:mt-0">
+              <h4 className="text-xl sm:text-2xl font-semibold">Impressions</h4>
+              <p className="text-muted-foreground text-sm sm:text-base">
+                Generated 5M + impressions and over 3M + views in one year
+              </p>
+            </div>
           </motion.div>
 
           {/* Card 5 */}
@@ -144,21 +148,11 @@ export default function Overview() {
             transition={{ type: "spring", stiffness: 300 }}
             className="p-6 sm:p-8 rounded-2xl bg-muted/40 backdrop-blur-sm border border-border shadow-sm"
           >
-            <h3 className="text-xl font-semibold mb-3">Development</h3>
+            <h3 className="text-xl font-semibold mb-3">
+              50+ <br /> Clients
+            </h3>
             <p className="text-muted-foreground text-sm sm:text-base">
-              Scalable, high-performance web apps built with modern tech.
-            </p>
-          </motion.div>
-
-          {/* Card 7 */}
-          <motion.div
-            whileHover={{ y: -10 }}
-            transition={{ type: "spring", stiffness: 300 }}
-            className="p-6 sm:p-8 rounded-2xl bg-muted/40 backdrop-blur-sm border border-border shadow-sm"
-          >
-            <h3 className="text-xl font-semibold mb-3">Development</h3>
-            <p className="text-muted-foreground text-sm sm:text-base">
-              Scalable, high-performance web apps built with modern tech.
+              Clients Across Technology, Healthcare, Finance, and beyond
             </p>
           </motion.div>
         </div>
